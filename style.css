@@ -1,0 +1,31 @@
+table {
+    background-color: lightgray;
+    border: 1px solid black;
+    width: 600px;
+
+}
+
+button {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 145px;
+    height: 75px;
+    font-size: 20px;
+}
+
+.doubleWidth {
+    width: 294px;
+}
+
+.textBox {
+    background-color: white;
+    border: 1px solid black;
+    height: 50px;
+    text-align: right;
+}
+
+.textBoxNoFill {
+    height: 50px;
+    text-align: right;
+}
