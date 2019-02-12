@@ -4,82 +4,83 @@
         <meta charset="UTF-8">
         <title>Calculator</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="logic.js"></script>
     </head>
     <body>
         <h1>This will be a calculator</h1>
         <div class="centered">
             <table>
                 <tr>
-                    <td colspan="4" class="textBoxNoFill">Display Command</td>
+                    <td colspan="4" class="textBoxNoFill" id="command"></td>
                 </tr>
                 <tr>
-                    <td colspan="4" class="textBox">Display Result/Input</td>
+                    <td colspan="4" class="textBox" id="result">0</td>
                 </tr>
                 <tr>
                     <td>
-                        <button>(</button>
+                        <button id="lBracketButton" onclick="inputButton(this.innerText)">(</button>
                     </td>
                     <td>
-                        <button>)</button>
+                        <button id="rBracketButton" onclick="inputButton(this.innerText)">)</button>
                     </td>
                     <td colspan="2">
-                        <button class="doubleWidth">C</button>
+                        <button class="doubleWidth" id="cButton" onclick="clearAll()">C</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button>7</button>
+                        <button id="7Button" onclick="inputButton(this.innerText)">7</button>
                     </td>
                     <td>
-                        <button>8</button>
+                        <button id="8Button" onclick="inputButton(this.innerText)">8</button>
                     </td>
                     <td>
-                        <button>9</button>
+                        <button id="9Button" onclick="inputButton(this.innerText)">9</button>
                     </td>
                     <td>
-                        <button>/</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>4</button>
-                    </td>
-                    <td>
-                        <button>5</button>
-                    </td>
-                    <td>
-                        <button>6</button>
-                    </td>
-                    <td>
-                        <button>X</button>
+                        <button id="divideButton" onclick="inputButton(this.innerText)">/</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button>1</button>
+                        <button id="4Button" onclick="inputButton(this.innerText)">4</button>
                     </td>
                     <td>
-                        <button>2</button>
+                        <button id="5Button" onclick="inputButton(this.innerText)">5</button>
                     </td>
                     <td>
-                        <button>3</button>
+                        <button id="6Button" onclick="inputButton(this.innerText)">6</button>
                     </td>
                     <td>
-                        <button>-</button>
+                        <button id="multiplyButton" onclick="inputButton(this.innerText)">*</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button>0</button>
+                        <button id="1Button" onclick="inputButton(this.innerText)">1</button>
                     </td>
                     <td>
-                        <button>.</button>
+                        <button id="2Button" onclick="inputButton(this.innerText)">2</button>
                     </td>
                     <td>
-                        <button>=</button>
+                        <button id="3Button" onclick="inputButton(this.innerText)">3</button>
                     </td>
                     <td>
-                        <button>+</button>
+                        <button id="subtractButton" onclick="inputButton(this.innerText)">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="0Button" onclick="inputButton(this.innerText)">0</button>
+                    </td>
+                    <td>
+                        <button id="decimalButton" onclick="inputButton(this.innerText)">.</button>
+                    </td>
+                    <td>
+                        <button id="equalsButton">=</button>
+                    </td>
+                    <td>
+                        <button id="additionButton" onclick="inputButton(this.innerText)">+</button>
                     </td>
                 </tr>
             </table>
