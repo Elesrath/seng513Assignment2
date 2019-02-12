@@ -33,3 +33,12 @@ button {
     font-family: monospace;
     font-size: 20px;
 }
+
+.centered {
+    margin: auto;
+    width: 600px;
+}
+
+.centeredText {
+    text-align: center;
+}
