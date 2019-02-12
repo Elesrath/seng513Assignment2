@@ -23,9 +23,13 @@ button {
     border: 1px solid black;
     height: 50px;
     text-align: right;
+    font-family: monospace;
+    font-size: 20px;
 }
 
 .textBoxNoFill {
     height: 50px;
     text-align: right;
+    font-family: monospace;
+    font-size: 20px;
 }
