@@ -1,32 +1,42 @@
+let equalsPressed = false;
+
 //When an input button is pressed, takes the innerText of the button
-//and adds it to the command being constructed in "command"
+//and adds it to the command being constructed in "result"
 function inputButton(buttonVal)
 {
-    let output = document.getElementById("command");
-    output.innerText = output.innerText + buttonVal;
+    let inputField = document.getElementById("input");
+    let pattern = new RegExp("^[+/*-]");
+    if(inputField.innerText === "Error: Invalid Expression")
+    {
+        inputField.innerText = buttonVal;
+        equalsPressed = false;
+    }
+    else if(inputField.innerText === "0")
+    {
+        inputField.innerText = buttonVal;
+        equalsPressed = false;
+    }
+    else if(equalsPressed && !pattern.test(buttonVal))
+    {
+        document.getElementById("prevCommand").innerText = "Ans=" + inputField.innerText;
+        inputField.innerText = buttonVal;
+        equalsPressed = false;
+    }
+    else
+    {
+        inputField.innerText = inputField.innerText + buttonVal;
+        equalsPressed = false;
+    }
 }
 
-//When the = button is pressed, takes the command from "command" and
-//evaluates it, and places the result in "result". In the case of an
-//invalid command, outputs and error into "result". If the command
-//starts with one of +-*/ take the value from result and prepend it
-//to the command
+//When the = button is pressed, takes the equation and evaluate it,
+//and store the equation in the prevCommand position
 function compute()
 {
-    let equation = document.getElementById("command").innerText;
-    let result = document.getElementById("result");
-    //If the value in "result" is a valid number...
-    if(!isNaN(result.innerText))
-    {
-        //Check to see if the command begins with +-*/...
-        let pattern = new RegExp("^[+/*-].+");
-        if(pattern.test(equation))
-        {
-            //If yes, prepend the result to the equation, resulting in
-            //result +-*/ equation
-            equation = result.innerText + equation;
-        }
-    }
+    let equation = document.getElementById("input").innerText;
+    let result = document.getElementById("input");
+    document.getElementById("prevCommand").innerText = equation + "=";
+    equalsPressed = true;
     try
     {
         //Attempt to evaluate the equation
@@ -40,12 +50,12 @@ function compute()
         //If the command was not a valid expression, inform the user
         result.innerText = "Error: Invalid Expression";
     }
-    document.getElementById("command").innerText = "";
 }
 
 //Reset the calculator. Removes current command and sets result to 0
 function clearAll()
 {
-    document.getElementById("command").innerText = "";
-    document.getElementById("result").innerText = "0";
+    document.getElementById("prevCommand").innerText = "";
+    document.getElementById("input").innerText = "0";
+    equalsPressed = false;
 }
