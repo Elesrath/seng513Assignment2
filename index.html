@@ -7,8 +7,8 @@
         <script type="text/javascript" src="logic.js"></script>
     </head>
     <body>
-        <h1 class="centeredText">I'm a calculator!</h1>
         <div class="centered">
+            <h1 class="centeredText">I'm a calculator!</h1>
             <table>
                 <tr>
                     <td colspan="4" class="textBoxNoFill" id="prevCommand"></td>
@@ -18,77 +18,77 @@
                 </tr>
                 <tr>
                     <td>
-                        <button id="lBracketButton" onclick="inputButton(this.innerText)">(</button>
+                        <button onclick="inputButton(this.innerText)">(</button>
                     </td>
                     <td>
-                        <button id="rBracketButton" onclick="inputButton(this.innerText)">)</button>
+                        <button onclick="inputButton(this.innerText)">)</button>
                     </td>
                     <td colspan="2">
-                        <button class="doubleWidth" id="cButton" onclick="clearAll()">C</button>
+                        <button class="doubleWidth" onclick="clearAll()">C</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button id="7Button" onclick="inputButton(this.innerText)">7</button>
+                        <button onclick="inputButton(this.innerText)">7</button>
                     </td>
                     <td>
-                        <button id="8Button" onclick="inputButton(this.innerText)">8</button>
+                        <button onclick="inputButton(this.innerText)">8</button>
                     </td>
                     <td>
-                        <button id="9Button" onclick="inputButton(this.innerText)">9</button>
+                        <button onclick="inputButton(this.innerText)">9</button>
                     </td>
                     <td>
-                        <button id="divideButton" onclick="inputButton(this.innerText)">/</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button id="4Button" onclick="inputButton(this.innerText)">4</button>
-                    </td>
-                    <td>
-                        <button id="5Button" onclick="inputButton(this.innerText)">5</button>
-                    </td>
-                    <td>
-                        <button id="6Button" onclick="inputButton(this.innerText)">6</button>
-                    </td>
-                    <td>
-                        <button id="multiplyButton" onclick="inputButton(this.innerText)">*</button>
+                        <button onclick="inputButton(this.innerText)">/</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button id="1Button" onclick="inputButton(this.innerText)">1</button>
+                        <button onclick="inputButton(this.innerText)">4</button>
                     </td>
                     <td>
-                        <button id="2Button" onclick="inputButton(this.innerText)">2</button>
+                        <button onclick="inputButton(this.innerText)">5</button>
                     </td>
                     <td>
-                        <button id="3Button" onclick="inputButton(this.innerText)">3</button>
+                        <button onclick="inputButton(this.innerText)">6</button>
                     </td>
                     <td>
-                        <button id="subtractButton" onclick="inputButton(this.innerText)">-</button>
+                        <button onclick="inputButton(this.innerText)">*</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button id="0Button" onclick="inputButton(this.innerText)">0</button>
+                        <button onclick="inputButton(this.innerText)">1</button>
                     </td>
                     <td>
-                        <button id="decimalButton" onclick="inputButton(this.innerText)">.</button>
+                        <button onclick="inputButton(this.innerText)">2</button>
                     </td>
                     <td>
-                        <button id="equalsButton" onclick="compute()">=</button>
+                        <button onclick="inputButton(this.innerText)">3</button>
                     </td>
                     <td>
-                        <button id="additionButton" onclick="inputButton(this.innerText)">+</button>
+                        <button onclick="inputButton(this.innerText)">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="inputButton(this.innerText)">0</button>
+                    </td>
+                    <td>
+                        <button onclick="inputButton(this.innerText)">.</button>
+                    </td>
+                    <td>
+                        <button onclick="compute()">=</button>
+                    </td>
+                    <td>
+                        <button onclick="inputButton(this.innerText)">+</button>
                     </td>
                 </tr>
             </table>
-        </div>
-        <div class="centeredText">
-            SENG 513 Assignment 1<br>
-            Made by Jeffrey Rude<br>
-            Winter 2019<br>
+            <div class="centeredText">
+                SENG 513 Assignment 1<br>
+                Made by Jeffrey Rude<br>
+                Winter 2019<br>
+            </div>
         </div>
     </body>
 </html>

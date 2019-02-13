@@ -42,3 +42,15 @@ button {
 .centeredText {
     text-align: center;
 }
+
+@media screen and (max-width: 992px) {
+    .centered {
+        background-color: paleturquoise;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .centered {
+        background-color: red;
+    }
+}
